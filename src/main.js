@@ -8,3 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('mount')
   );
 });
+console.log('test');

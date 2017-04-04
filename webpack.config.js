@@ -6,7 +6,7 @@ module.exports = {
     './main.js',
   ],
   output: {
-    path: path.join(__dirname, 'www'),
+    path: path.join(__dirname, 'www/js'),
     filename: 'bundle.js',
   },
   module: {
@@ -14,9 +14,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
+        loader:"babel-loader",
+        options:{
+          presets:["es2015","react"]
+        }
       },
     ],
   },
